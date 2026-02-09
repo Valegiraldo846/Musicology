@@ -1,7 +1,175 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+}
+
+header section {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  height: 100vh;
+  background-color: #111111;
+  padding: 80px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+.hero button {
+  width: fit-content;
+  padding: 14px 35px;
+  font-size: 16px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #e65c00;
+}
+
+.hero {
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  width: 280px;
+  background-color: #141313;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.card-text p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.block {
+  background-color: #ff6a00;
+  padding: 80px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction:row ;
+}
+
+.banner {
+  background-color: #111;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  color: #ccc;
+}
+
+.price-card {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.price-card {
+  width: 260px;
+  background-color: #1f1f1f;
+  padding: 30px 20px;
+  border-radius: 10px;
+}
+
+.price-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.price-card p {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.price-card span {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ff6a00;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+footer {
+  background-color: #ff6a00;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+footer {
+  color: #ff6a00;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
