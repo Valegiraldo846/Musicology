@@ -6,27 +6,27 @@
 }
 
 header section {
-  background-color: gray;
+  background-color: rgb(119, 118, 118);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 60px;
 }
 
 .hero {
   height: 100vh;
-  background-color: #111111;
   padding: 80px;
-}
-
-.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: url("../assets/images/background.png");
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
 .hero h1 {
   font-size: 70px;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -46,31 +46,53 @@ header section {
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .hero button:hover {
   background-color: #e65c00;
 }
 
-.hero {
-  background-image: url("../assets/images/background.png");
-  background-size: cover;
-  background-position: center;
+.block {
+  background-color: #ff6a00;
+  padding: 220px 40px 80px 40px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 40px;
+.titulo-seccion {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.parrafo-seccion {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 18px;
+  max-width: 600px;
 }
 
 .card {
   width: 280px;
-  background-color: #141313;
+  background-color: #2a2929;
   border-radius: 10px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -81,6 +103,7 @@ header section {
 .card-text {
   padding: 20px;
   text-align: center;
+  color: white;
 }
 
 .card-text h3 {
@@ -93,18 +116,11 @@ header section {
   color: #ccc;
 }
 
-.block {
-  background-color: #ff6a00;
-  padding: 80px 40px;
-  text-align: center;
-  display: flex;
-  flex-direction:row ;
-}
-
 .banner {
-  background-color: #111;
+  background-color: #272728;
   padding: 80px 40px;
   text-align: center;
+  color: white;
 }
 
 .banner h2 {
@@ -118,18 +134,27 @@ header section {
   color: #ccc;
 }
 
-.price-card {
+.price-container {
   display: flex;
-  gap: 30px;
   justify-content: center;
-  margin-top: 40px;
+  gap: 30px;
+}
+
+.price-container span {
+  width: 1000px;
+  background-color: #272728;
 }
 
 .price-card {
   width: 260px;
-  background-color: #1f1f1f;
+  background-color: #e65c00;
   padding: 30px 20px;
   border-radius: 10px;
+  transition: 0.3s;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
 }
 
 .price-card h3 {
@@ -149,11 +174,6 @@ header section {
   color: #ff6a00;
 }
 
-.price-card:hover {
-  transform: translateY(-10px);
-  transition: 0.3s;
-}
-
 footer {
   background-color: #ff6a00;
   padding: 30px 20px;
@@ -161,15 +181,68 @@ footer {
 }
 
 footer p {
-  font-size: 14px;
-  color: #aaa;
+  font-size: 20px;
+  color: white;
 }
 
-footer {
-  color: #ff6a00;
-  text-decoration: none;
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 55px;
+  }
+
+  .block {
+    flex-wrap: wrap;
+  }
+
+  .price-container {
+    flex-wrap: wrap;
+  }
 }
 
-footer a:hover {
-  text-decoration: underline;
+@media (max-width: 768px) {
+  header section {
+    padding: 20px 30px;
+  }
+
+  .hero {
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .block {
+    flex-direction: column;
+    align-items: center;
+    padding: 260px 20px 80px 20px;
+  }
+
+  .titulo-seccion {
+    font-size: 30px;
+  }
+
+  .parrafo-seccion {
+    font-size: 16px;
+    max-width: 90%;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .price-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card {
+    width: 90%;
+  }
 }
